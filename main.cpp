@@ -15,16 +15,13 @@ void truyvet(int i, int &j)
             f[i] = f[i-1];
         }
         truyvet(i+1, j);
-        if (i > 0)
+        if (i != j)
         {
-            if (i != j)
-            {
-                cout << a[i] << " ";
-            }
-            else
-            {
-                j = cs[du[i-1]];
-            }
+            cout << a[i] << " ";
+        }
+        else
+        {
+            j = cs[du[i-1]];
         }
     }
     else j = cs[du[n]];
